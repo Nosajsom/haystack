@@ -1,0 +1,25 @@
+/* Add styles to the form container */
+.renameFormContainer {
+  max-width: 300px;
+  padding: 10px;
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  z-index: 9;
+  background-color: white;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container{
+  margin:30px;
+
+}

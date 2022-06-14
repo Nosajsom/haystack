@@ -1,0 +1,616 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><title>client 0.0.1 Demo</title><script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script><script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script><style id="typography.js">/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+      html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      main,
+      menu,
+      nav,
+      section,
+      summary {
+        display: block;
+      }
+      audio,
+      canvas,
+      progress,
+      video {
+        display: inline-block;
+      }
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      [hidden],
+      template {
+        display: none;
+      }
+      a {
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+      }
+      a:active,
+      a:hover {
+        outline-width: 0;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: inherit;
+        font-weight: bolder;
+      }
+      dfn {
+        font-style: italic;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      mark {
+        background-color: #ff0;
+        color: #000;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border-style: none;
+      }
+      svg:not(:root) {
+        overflow: hidden;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      figure {
+        margin: 1em 40px;
+      }
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font: inherit;
+        margin: 0;
+      }
+      optgroup {
+        font-weight: 700;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type="reset"],
+      [type="submit"],
+      button,
+      html [type="button"] {
+        -webkit-appearance: button;
+      }
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring,
+      button:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      fieldset {
+        border: 1px solid silver;
+        margin: 0 2px;
+        padding: 0.35em 0.625em 0.75em;
+      }
+      legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal;
+      }
+      textarea {
+        overflow: auto;
+      }
+      [type="checkbox"],
+      [type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      [type="number"]::-webkit-inner-spin-button,
+      [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      [type="search"]::-webkit-search-cancel-button,
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-input-placeholder {
+        color: inherit;
+        opacity: 0.54;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      html {
+        font-size: 100%;
+        line-height: 1.5em;
+        box-sizing: border-box;
+        overflow-y: scroll;
+      }
+      * {
+        box-sizing: inherit;
+      }
+      *:before {
+        box-sizing: inherit;
+      }
+      *:after {
+        box-sizing: inherit;
+      }
+      body {
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: normal;
+        word-wrap: break-word;
+      }
+      img {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+      }
+      h1 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        font-size: 2rem;
+        line-height: 2.25rem;
+      }
+      h2 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        font-size: 1.51572rem;
+        line-height: 2.25rem;
+      }
+      h3 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        font-size: 1.31951rem;
+        line-height: 2.25rem;
+      }
+      h4 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      h5 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        font-size: 0.87055rem;
+        line-height: 1.5rem;
+      }
+      h6 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        color: hsla(0, 0%, 0%, 0.8);
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        font-size: 0.81225rem;
+        line-height: 1.5rem;
+      }
+      hgroup {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      ul {
+        margin-left: 1.5rem;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        list-style-position: outside;
+        list-style-image: none;
+      }
+      ol {
+        margin-left: 1.5rem;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        list-style-position: outside;
+        list-style-image: none;
+      }
+      dl {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      dd {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      figure {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      pre {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
+        line-height: 1.42;
+        background: hsla(0, 0%, 0%, 0.04);
+        border-radius: 3px;
+        overflow: auto;
+        padding: 1.5rem;
+      }
+      table {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      fieldset {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      blockquote {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      form {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      noscript {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      iframe {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      hr {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: calc(1.5rem - 1px);
+        background: hsla(0, 0%, 0%, 0.2);
+        border: none;
+        height: 1px;
+      }
+      address {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 1.5rem;
+      }
+      b {
+        font-weight: bold;
+      }
+      strong {
+        font-weight: bold;
+      }
+      dt {
+        font-weight: bold;
+      }
+      th {
+        font-weight: bold;
+      }
+      li {
+        margin-bottom: calc(1.5rem / 2);
+      }
+      ol li {
+        padding-left: 0;
+      }
+      ul li {
+        padding-left: 0;
+      }
+      li > ol {
+        margin-left: 1.5rem;
+        margin-bottom: calc(1.5rem / 2);
+        margin-top: calc(1.5rem / 2);
+      }
+      li > ul {
+        margin-left: 1.5rem;
+        margin-bottom: calc(1.5rem / 2);
+        margin-top: calc(1.5rem / 2);
+      }
+      code {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+      }
+      kbd {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+      }
+      samp {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+      }
+      abbr {
+        border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+        cursor: help;
+      }
+      acronym {
+        border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+        cursor: help;
+      }
+      abbr[title] {
+        border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+        cursor: help;
+        text-decoration: none;
+      }
+      thead {
+        text-align: left;
+      }
+      td,
+      th {
+        text-align: left;
+        border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+        font-feature-settings: tnum;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.75rem;
+        padding-bottom: calc(0.75rem - 1px);
+      }
+      th:first-child,
+      td:first-child {
+        padding-left: 0;
+      }
+      th:last-child,
+      td:last-child {
+        padding-right: 0;
+      }
+      tt,
+      code {
+        background-color: hsla(0, 0%, 0%, 0.04);
+        border-radius: 3px;
+        font-family: Consolas, "Roboto Mono", "Liberation Mono", Menlo, Courier,
+          monospace;
+        padding: 0;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+      }
+      pre code {
+        background: none;
+        line-height: 1.42;
+      }
+      code:before,
+      code:after,
+      tt:before,
+      tt:after {
+        letter-spacing: -0.2em;
+        content: " ";
+      }
+      pre code:before,
+      pre code:after,
+      pre tt:before,
+      pre tt:after {
+        content: "";
+      }
+
+      fieldset {
+        padding: 16px;
+      }</style>
+    <script>
+        function imageClick(url) {
+            window.location = url;
+        }
+    </script>
+      
+      
+      </head><body><div style="max-width: 680px; margin: 4em auto"><img src="./onlea-smaller.png" style="width: 96px; margin-bottom: 2em" onclick="imageClick('https://accd06d6e60d41de941d716e97ebdbed.vfs.cloud9.us-west-2.amazonaws.com:8081/admin/admin/dashboard')"/><h2>AI Chat Demo</h2><form><fieldset><legend>Start the Chat</legend><p><label for="chats">Chat</label> <select id="chats"><option value="demo0">Haystack</option></select></p><p><label for="users">User</label> <select id="users"><option value="user1">Student</option></select></p><button id="join">Join</button></fieldset></form><h2>Usage</h2><p>First add the client bundle to the page you want to include the chat on.</p><pre><code>&#x3C;script src=&#x22;OnleaChatClient.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre><p>With the client bundle on the page, initialize the chat client with a configuration object to start it.</p><ul><li><code>endpoint</code>: the backend server for the chat client</li><li><code>userId</code>: an identifier for the user to start the chat as</li><li><code>chatId</code>: an identifier for the chat conversation to connect to</li></ul><div class="highlight highlight-source-js"><pre><span class="pl-v">OnleaChatClient</span><span class="pl-kos">.</span><span class="pl-en">init</span><span class="pl-kos">(</span><span class="pl-kos">{</span>
+  <span class="pl-c1">endpoint</span>: <span class="pl-s">"localhost:5000"</span><span class="pl-kos">,</span>
+  <span class="pl-c1">userId</span>: <span class="pl-s">"user1"</span><span class="pl-kos">,</span>
+  <span class="pl-c1">chatId</span>: <span class="pl-s">"abcd"</span><span class="pl-kos">,</span>
+<span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div></div><script>!function(e){function r(r){for(var n,l,f=r[0],i=r[1],a=r[2],c=0,s=[];c<f.length;c++)l=f[c],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(e[n]=i[n]);for(p&&p(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,f=1;f<t.length;f++){var i=t[f];0!==o[i]&&(n=!1)}n&&(u.splice(r--,1),e=l(l.s=t[0]))}return e}var n={},o={1:0},u=[];function l(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,l),t.l=!0,t.exports}l.m=e,l.c=n,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,r){if(1&r&&(e=l(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)l.d(t,n,function(r){return e[r]}.bind(null,n));return t},l.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="";var f=window.webpackJsonp=window.webpackJsonp||[],i=f.push.bind(f);f.push=r,f=f.slice();for(var a=0;a<f.length;a++)r(f[a]);var p=i;t()}([]);</script><script src="demo.6bd5aab0.js"></script></body></html>

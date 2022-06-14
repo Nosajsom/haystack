@@ -1,0 +1,35 @@
+.grad{
+    height:40%;
+  width:100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+background: rgb(205,217,52);
+background: linear-gradient(150deg, rgba(205,217,52,1) 0%, rgba(63,190,181,1) 100%);
+}
+
+.card_index{
+    background:#FFFFFF;
+    width:150px;
+    height:200px;
+    border-radius:20px;
+    
+}
+
+.header3{
+    text-align: center;
+    margin-top:5px;
+    margin-bottom:0px;
+    
+    
+}
+
+.card_hyperlink{
+    color: #000000;
+}
+.card_hyperlink:hover{
+    color: #000000;
+}

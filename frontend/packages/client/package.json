@@ -1,0 +1,63 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.1",
+  "description": "chat module for Onlea",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component  --copy-files && chmod +x ./bundle.sh ./bundle.sh",
+    "build:copy": "nwb build-react-component --copy-files && chmod +x ./bundle.sh && ./bundle.sh && rm -rf ../server/public && cp -r demo/dist ../server/public",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start.old": "nwb serve-react-demo",
+    "start": "nwb serve demo/src/379/index.js",
+    "deploy": "surge bundle --domain onlea-chat-demo.surge.sh",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "clsx": "^1.1.1",
+    "d3-time-format": "^3.0.0",
+    "linkifyjs": "^2.1.9",
+    "socket.io-client": "^3.1.1",
+    "zustand": "^3.3.1"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "nwb": "0.25.x",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "author": "Lane Olson",
+  "homepage": "",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "ie 11",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie 11",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
