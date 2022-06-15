@@ -65,7 +65,7 @@ class App extends Component {
           await Promise.all(files.map(async (file)=>{
             const formData = new FormData();
             formData.append('file', file);
-            return fetch("/haystack/file-upload", 
+            var APIResult = fetch("/haystack/file-upload", 
               {
               "headers": {
                 "Cookie": new URLSearchParams({"user":user}).toString(),
@@ -73,13 +73,15 @@ class App extends Component {
               "body": formData,
               "method": "POST"
             })
+            console.log(APIResult)
+            return APIResult
           }))
           window.confirm("Upload finished")
         } catch(err){
           window.confirm("Upload error")
           console.log(err)
         } finally{
-          window.location.reload();
+          // window.location.reload();
         }
     };
     

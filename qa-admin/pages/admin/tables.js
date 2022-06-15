@@ -96,7 +96,7 @@ function Tables({response}) {
 
                             <tr key={"outerfile"+d._source.name}>
                               <td style={{minWidth: 300,}}>{d._source.name}</td>
-                              <td style={{minWidth: 600}}>{d._source.text.slice(0,100)}</td>
+                              <td style={{minWidth: 600}}>{d._source.content.slice(0,100)}</td>
                               <td style={{minWidth: 200}}>{d._source.added_time}</td>
                               <td style={{minWidth: 50}}><a href={source} target="_blank" rel="noopener noreferrer">Link</a></td>
                               
